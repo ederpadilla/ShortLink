@@ -158,6 +158,9 @@
 		E67BC09F2AEAD1C200C6F742 /* foundation */ = {
 			isa = PBXGroup;
 			children = (
+				E67BC0C02AEAD52200C6F742 /* core */,
+				E67BC0BF2AEAD51A00C6F742 /* network */,
+				E67BC0BE2AEAD51000C6F742 /* stying */,
 			);
 			path = foundation;
 			sourceTree = "<group>";
@@ -264,6 +267,27 @@
 				E67BC0B82AEAD48F00C6F742 /* HomeDomainModels.swift */,
 			);
 			path = model;
+			sourceTree = "<group>";
+		};
+		E67BC0BE2AEAD51000C6F742 /* stying */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = stying;
+			sourceTree = "<group>";
+		};
+		E67BC0BF2AEAD51A00C6F742 /* network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = network;
+			sourceTree = "<group>";
+		};
+		E67BC0C02AEAD52200C6F742 /* core */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = core;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
