@@ -20,7 +20,12 @@ struct ShortLinkRequest: Encodable {
 
 struct ShortLinkResponse: Decodable {
     var alias: String? = nil
-    var links: [LinkResponse]? = nil
+    var links: LinkResponse? = nil
+    
+    enum CodingKeys: String, CodingKey {
+        case alias = "alias"
+        case links = "_links"
+    }
 }
 
 struct LinkResponse: Decodable {
