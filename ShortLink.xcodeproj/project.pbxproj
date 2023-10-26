@@ -16,6 +16,7 @@
 		E67BC0922AEACD9D00C6F742 /* ShortLinkUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67BC0912AEACD9D00C6F742 /* ShortLinkUITestsLaunchTests.swift */; };
 		E67BC0A82AEAD34D00C6F742 /* HomeUIModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67BC0A72AEAD34D00C6F742 /* HomeUIModels.swift */; };
 		E67BC0AB2AEAD36C00C6F742 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67BC0AA2AEAD36C00C6F742 /* HomeViewModel.swift */; };
+		E67BC0AE2AEAD3CD00C6F742 /* HomeInjector.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67BC0AD2AEAD3CD00C6F742 /* HomeInjector.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		E67BC0912AEACD9D00C6F742 /* ShortLinkUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortLinkUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		E67BC0A72AEAD34D00C6F742 /* HomeUIModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeUIModels.swift; sourceTree = "<group>"; };
 		E67BC0AA2AEAD36C00C6F742 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		E67BC0AD2AEAD3CD00C6F742 /* HomeInjector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInjector.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,6 +195,7 @@
 		E67BC0A52AEAD2A400C6F742 /* di */ = {
 			isa = PBXGroup;
 			children = (
+				E67BC0AD2AEAD3CD00C6F742 /* HomeInjector.swift */,
 			);
 			path = di;
 			sourceTree = "<group>";
@@ -353,6 +356,7 @@
 			files = (
 				E67BC0772AEACD9A00C6F742 /* HomeView.swift in Sources */,
 				E67BC0A82AEAD34D00C6F742 /* HomeUIModels.swift in Sources */,
+				E67BC0AE2AEAD3CD00C6F742 /* HomeInjector.swift in Sources */,
 				E67BC0752AEACD9A00C6F742 /* ShortLinkApp.swift in Sources */,
 				E67BC0AB2AEAD36C00C6F742 /* HomeViewModel.swift in Sources */,
 			);
