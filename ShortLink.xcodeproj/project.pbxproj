@@ -8,12 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		E67BC0752AEACD9A00C6F742 /* ShortLinkApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67BC0742AEACD9A00C6F742 /* ShortLinkApp.swift */; };
-		E67BC0772AEACD9A00C6F742 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67BC0762AEACD9A00C6F742 /* ContentView.swift */; };
+		E67BC0772AEACD9A00C6F742 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67BC0762AEACD9A00C6F742 /* HomeView.swift */; };
 		E67BC0792AEACD9C00C6F742 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E67BC0782AEACD9C00C6F742 /* Assets.xcassets */; };
 		E67BC07C2AEACD9C00C6F742 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E67BC07B2AEACD9C00C6F742 /* Preview Assets.xcassets */; };
 		E67BC0862AEACD9C00C6F742 /* ShortLinkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67BC0852AEACD9C00C6F742 /* ShortLinkTests.swift */; };
 		E67BC0902AEACD9D00C6F742 /* ShortLinkUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67BC08F2AEACD9D00C6F742 /* ShortLinkUITests.swift */; };
 		E67BC0922AEACD9D00C6F742 /* ShortLinkUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67BC0912AEACD9D00C6F742 /* ShortLinkUITestsLaunchTests.swift */; };
+		E67BC0A82AEAD34D00C6F742 /* HomeUIModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67BC0A72AEAD34D00C6F742 /* HomeUIModels.swift */; };
+		E67BC0AB2AEAD36C00C6F742 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67BC0AA2AEAD36C00C6F742 /* HomeViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +38,7 @@
 /* Begin PBXFileReference section */
 		E67BC0712AEACD9A00C6F742 /* ShortLink.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShortLink.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E67BC0742AEACD9A00C6F742 /* ShortLinkApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortLinkApp.swift; sourceTree = "<group>"; };
-		E67BC0762AEACD9A00C6F742 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		E67BC0762AEACD9A00C6F742 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		E67BC0782AEACD9C00C6F742 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E67BC07B2AEACD9C00C6F742 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E67BC0812AEACD9C00C6F742 /* ShortLinkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShortLinkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +46,8 @@
 		E67BC08B2AEACD9D00C6F742 /* ShortLinkUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShortLinkUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E67BC08F2AEACD9D00C6F742 /* ShortLinkUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortLinkUITests.swift; sourceTree = "<group>"; };
 		E67BC0912AEACD9D00C6F742 /* ShortLinkUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortLinkUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		E67BC0A72AEAD34D00C6F742 /* HomeUIModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeUIModels.swift; sourceTree = "<group>"; };
+		E67BC0AA2AEAD36C00C6F742 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,7 +102,6 @@
 				E67BC09F2AEAD1C200C6F742 /* foundation */,
 				E67BC0A02AEAD1CD00C6F742 /* buildconfig */,
 				E67BC0742AEACD9A00C6F742 /* ShortLinkApp.swift */,
-				E67BC0762AEACD9A00C6F742 /* ContentView.swift */,
 				E67BC0782AEACD9C00C6F742 /* Assets.xcassets */,
 				E67BC07A2AEACD9C00C6F742 /* Preview Content */,
 			);
@@ -166,6 +169,9 @@
 		E67BC0A22AEAD28C00C6F742 /* ui */ = {
 			isa = PBXGroup;
 			children = (
+				E67BC0AC2AEAD37A00C6F742 /* views */,
+				E67BC0A62AEAD33A00C6F742 /* model */,
+				E67BC0A92AEAD35B00C6F742 /* viewmodel */,
 			);
 			path = ui;
 			sourceTree = "<group>";
@@ -189,6 +195,30 @@
 			children = (
 			);
 			path = di;
+			sourceTree = "<group>";
+		};
+		E67BC0A62AEAD33A00C6F742 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				E67BC0A72AEAD34D00C6F742 /* HomeUIModels.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		E67BC0A92AEAD35B00C6F742 /* viewmodel */ = {
+			isa = PBXGroup;
+			children = (
+				E67BC0AA2AEAD36C00C6F742 /* HomeViewModel.swift */,
+			);
+			path = viewmodel;
+			sourceTree = "<group>";
+		};
+		E67BC0AC2AEAD37A00C6F742 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				E67BC0762AEACD9A00C6F742 /* HomeView.swift */,
+			);
+			path = views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -321,8 +351,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E67BC0772AEACD9A00C6F742 /* ContentView.swift in Sources */,
+				E67BC0772AEACD9A00C6F742 /* HomeView.swift in Sources */,
+				E67BC0A82AEAD34D00C6F742 /* HomeUIModels.swift in Sources */,
 				E67BC0752AEACD9A00C6F742 /* ShortLinkApp.swift in Sources */,
+				E67BC0AB2AEAD36C00C6F742 /* HomeViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
