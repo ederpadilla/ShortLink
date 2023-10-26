@@ -24,6 +24,7 @@
 		E67BC0BB2AEAD4B800C6F742 /* GetShortUrlsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67BC0BA2AEAD4B800C6F742 /* GetShortUrlsUseCase.swift */; };
 		E67BC0BD2AEAD4C500C6F742 /* CreateShortUrlUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67BC0BC2AEAD4C500C6F742 /* CreateShortUrlUseCase.swift */; };
 		E67BC0C32AEAD58F00C6F742 /* BuildConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67BC0C22AEAD58F00C6F742 /* BuildConfig.swift */; };
+		E67BC0C52AEAD6C300C6F742 /* NetworkClientBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67BC0C42AEAD6C300C6F742 /* NetworkClientBuilder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		E67BC0BC2AEAD4C500C6F742 /* CreateShortUrlUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateShortUrlUseCase.swift; sourceTree = "<group>"; };
 		E67BC0C12AEAD57800C6F742 /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
 		E67BC0C22AEAD58F00C6F742 /* BuildConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildConfig.swift; sourceTree = "<group>"; };
+		E67BC0C42AEAD6C300C6F742 /* NetworkClientBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClientBuilder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -284,6 +286,7 @@
 		E67BC0BF2AEAD51A00C6F742 /* network */ = {
 			isa = PBXGroup;
 			children = (
+				E67BC0C42AEAD6C300C6F742 /* NetworkClientBuilder.swift */,
 			);
 			path = network;
 			sourceTree = "<group>";
@@ -434,6 +437,7 @@
 				E67BC0C32AEAD58F00C6F742 /* BuildConfig.swift in Sources */,
 				E67BC0A82AEAD34D00C6F742 /* HomeUIModels.swift in Sources */,
 				E67BC0B42AEAD41900C6F742 /* HomeRemoteDataSource.swift in Sources */,
+				E67BC0C52AEAD6C300C6F742 /* NetworkClientBuilder.swift in Sources */,
 				E67BC0AE2AEAD3CD00C6F742 /* HomeInjector.swift in Sources */,
 				E67BC0752AEACD9A00C6F742 /* ShortLinkApp.swift in Sources */,
 				E67BC0AB2AEAD36C00C6F742 /* HomeViewModel.swift in Sources */,
