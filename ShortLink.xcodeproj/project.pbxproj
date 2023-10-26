@@ -21,7 +21,6 @@
 		E67BC0B42AEAD41900C6F742 /* CreateShortLinkRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67BC0B32AEAD41900C6F742 /* CreateShortLinkRemoteDataSource.swift */; };
 		E67BC0B62AEAD42400C6F742 /* ShortLinkRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67BC0B52AEAD42400C6F742 /* ShortLinkRepository.swift */; };
 		E67BC0B92AEAD48F00C6F742 /* ShortLinkDomainModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67BC0B82AEAD48F00C6F742 /* ShortLinkDomainModels.swift */; };
-		E67BC0BB2AEAD4B800C6F742 /* GetShortLinkUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67BC0BA2AEAD4B800C6F742 /* GetShortLinkUseCase.swift */; };
 		E67BC0BD2AEAD4C500C6F742 /* CreateShortLinkUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67BC0BC2AEAD4C500C6F742 /* CreateShortLinkUseCase.swift */; };
 		E67BC0C32AEAD58F00C6F742 /* BuildConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67BC0C22AEAD58F00C6F742 /* BuildConfig.swift */; };
 		E67BC0C52AEAD6C300C6F742 /* NetworkClientBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67BC0C42AEAD6C300C6F742 /* NetworkClientBuilder.swift */; };
@@ -64,7 +63,6 @@
 		E67BC0B32AEAD41900C6F742 /* CreateShortLinkRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateShortLinkRemoteDataSource.swift; sourceTree = "<group>"; };
 		E67BC0B52AEAD42400C6F742 /* ShortLinkRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortLinkRepository.swift; sourceTree = "<group>"; };
 		E67BC0B82AEAD48F00C6F742 /* ShortLinkDomainModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortLinkDomainModels.swift; sourceTree = "<group>"; };
-		E67BC0BA2AEAD4B800C6F742 /* GetShortLinkUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetShortLinkUseCase.swift; sourceTree = "<group>"; };
 		E67BC0BC2AEAD4C500C6F742 /* CreateShortLinkUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateShortLinkUseCase.swift; sourceTree = "<group>"; };
 		E67BC0C12AEAD57800C6F742 /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
 		E67BC0C22AEAD58F00C6F742 /* BuildConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildConfig.swift; sourceTree = "<group>"; };
@@ -219,7 +217,6 @@
 			isa = PBXGroup;
 			children = (
 				E67BC0B72AEAD47F00C6F742 /* model */,
-				E67BC0BA2AEAD4B800C6F742 /* GetShortLinkUseCase.swift */,
 				E67BC0BC2AEAD4C500C6F742 /* CreateShortLinkUseCase.swift */,
 			);
 			path = domain;
@@ -437,7 +434,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				E67BC0B62AEAD42400C6F742 /* ShortLinkRepository.swift in Sources */,
-				E67BC0BB2AEAD4B800C6F742 /* GetShortLinkUseCase.swift in Sources */,
 				E67BC0B22AEAD40A00C6F742 /* CreateShortLinkRemoteModels.swift in Sources */,
 				E67BC0BD2AEAD4C500C6F742 /* CreateShortLinkUseCase.swift in Sources */,
 				E67BC0772AEACD9A00C6F742 /* ShortLinkView.swift in Sources */,
