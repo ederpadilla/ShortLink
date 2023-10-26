@@ -7,11 +7,11 @@
 
 import Foundation
 
-protocol ShortLinkRepository {
+protocol ShortLinkRepo {
     func createShortLink(_ url: URL) async throws -> ShortLink
 }
 
-struct ShortLinkRepo: ShortLinkRepository {
+struct ShortLinkRepository: ShortLinkRepo {
     
     private let createShortLinkRemote: CreateShortLinkRemote
     
