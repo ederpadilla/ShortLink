@@ -94,6 +94,9 @@
 		E67BC0732AEACD9A00C6F742 /* ShortLink */ = {
 			isa = PBXGroup;
 			children = (
+				E67BC09E2AEAD1B600C6F742 /* features */,
+				E67BC09F2AEAD1C200C6F742 /* foundation */,
+				E67BC0A02AEAD1CD00C6F742 /* buildconfig */,
 				E67BC0742AEACD9A00C6F742 /* ShortLinkApp.swift */,
 				E67BC0762AEACD9A00C6F742 /* ContentView.swift */,
 				E67BC0782AEACD9C00C6F742 /* Assets.xcassets */,
@@ -125,6 +128,27 @@
 				E67BC0912AEACD9D00C6F742 /* ShortLinkUITestsLaunchTests.swift */,
 			);
 			path = ShortLinkUITests;
+			sourceTree = "<group>";
+		};
+		E67BC09E2AEAD1B600C6F742 /* features */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = features;
+			sourceTree = "<group>";
+		};
+		E67BC09F2AEAD1C200C6F742 /* foundation */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = foundation;
+			sourceTree = "<group>";
+		};
+		E67BC0A02AEAD1CD00C6F742 /* buildconfig */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = buildconfig;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
