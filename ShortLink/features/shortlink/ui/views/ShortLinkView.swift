@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  ShortLinkView.swift
 //  ShortLink
 //
 //  Created by Eder  Padilla on 26/10/23.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct HomeView: View {
+struct ShortLinkView: View {
     var body: some View {
         VStack {
             Image(systemName: "globe")
@@ -34,5 +34,5 @@ struct HomeView: View {
 }
 
 #Preview {
-    HomeView()
+    ShortLinkView()
 }
