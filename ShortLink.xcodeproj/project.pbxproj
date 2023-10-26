@@ -23,6 +23,7 @@
 		E67BC0B92AEAD48F00C6F742 /* HomeDomainModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67BC0B82AEAD48F00C6F742 /* HomeDomainModels.swift */; };
 		E67BC0BB2AEAD4B800C6F742 /* GetShortUrlsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67BC0BA2AEAD4B800C6F742 /* GetShortUrlsUseCase.swift */; };
 		E67BC0BD2AEAD4C500C6F742 /* CreateShortUrlUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67BC0BC2AEAD4C500C6F742 /* CreateShortUrlUseCase.swift */; };
+		E67BC0C32AEAD58F00C6F742 /* BuildConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67BC0C22AEAD58F00C6F742 /* BuildConfig.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,8 @@
 		E67BC0B82AEAD48F00C6F742 /* HomeDomainModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDomainModels.swift; sourceTree = "<group>"; };
 		E67BC0BA2AEAD4B800C6F742 /* GetShortUrlsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetShortUrlsUseCase.swift; sourceTree = "<group>"; };
 		E67BC0BC2AEAD4C500C6F742 /* CreateShortUrlUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateShortUrlUseCase.swift; sourceTree = "<group>"; };
+		E67BC0C12AEAD57800C6F742 /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
+		E67BC0C22AEAD58F00C6F742 /* BuildConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildConfig.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +171,8 @@
 		E67BC0A02AEAD1CD00C6F742 /* buildconfig */ = {
 			isa = PBXGroup;
 			children = (
+				E67BC0C12AEAD57800C6F742 /* Debug.xcconfig */,
+				E67BC0C22AEAD58F00C6F742 /* BuildConfig.swift */,
 			);
 			path = buildconfig;
 			sourceTree = "<group>";
@@ -426,6 +431,7 @@
 				E67BC0BD2AEAD4C500C6F742 /* CreateShortUrlUseCase.swift in Sources */,
 				E67BC0772AEACD9A00C6F742 /* HomeView.swift in Sources */,
 				E67BC0B92AEAD48F00C6F742 /* HomeDomainModels.swift in Sources */,
+				E67BC0C32AEAD58F00C6F742 /* BuildConfig.swift in Sources */,
 				E67BC0A82AEAD34D00C6F742 /* HomeUIModels.swift in Sources */,
 				E67BC0B42AEAD41900C6F742 /* HomeRemoteDataSource.swift in Sources */,
 				E67BC0AE2AEAD3CD00C6F742 /* HomeInjector.swift in Sources */,
