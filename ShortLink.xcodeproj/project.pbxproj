@@ -133,6 +133,7 @@
 		E67BC09E2AEAD1B600C6F742 /* features */ = {
 			isa = PBXGroup;
 			children = (
+				E67BC0A12AEAD28000C6F742 /* home */,
 			);
 			path = features;
 			sourceTree = "<group>";
@@ -149,6 +150,45 @@
 			children = (
 			);
 			path = buildconfig;
+			sourceTree = "<group>";
+		};
+		E67BC0A12AEAD28000C6F742 /* home */ = {
+			isa = PBXGroup;
+			children = (
+				E67BC0A22AEAD28C00C6F742 /* ui */,
+				E67BC0A42AEAD29D00C6F742 /* domain */,
+				E67BC0A32AEAD29300C6F742 /* data */,
+				E67BC0A52AEAD2A400C6F742 /* di */,
+			);
+			path = home;
+			sourceTree = "<group>";
+		};
+		E67BC0A22AEAD28C00C6F742 /* ui */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ui;
+			sourceTree = "<group>";
+		};
+		E67BC0A32AEAD29300C6F742 /* data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = data;
+			sourceTree = "<group>";
+		};
+		E67BC0A42AEAD29D00C6F742 /* domain */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = domain;
+			sourceTree = "<group>";
+		};
+		E67BC0A52AEAD2A400C6F742 /* di */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = di;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
