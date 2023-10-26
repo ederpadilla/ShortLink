@@ -21,8 +21,8 @@
 		E67BC0B42AEAD41900C6F742 /* HomeRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67BC0B32AEAD41900C6F742 /* HomeRemoteDataSource.swift */; };
 		E67BC0B62AEAD42400C6F742 /* HomeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67BC0B52AEAD42400C6F742 /* HomeRepository.swift */; };
 		E67BC0B92AEAD48F00C6F742 /* HomeDomainModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67BC0B82AEAD48F00C6F742 /* HomeDomainModels.swift */; };
-		E67BC0BB2AEAD4B800C6F742 /* GetShortUrlsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67BC0BA2AEAD4B800C6F742 /* GetShortUrlsUseCase.swift */; };
-		E67BC0BD2AEAD4C500C6F742 /* CreateShortUrlUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67BC0BC2AEAD4C500C6F742 /* CreateShortUrlUseCase.swift */; };
+		E67BC0BB2AEAD4B800C6F742 /* GetShortLinkUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67BC0BA2AEAD4B800C6F742 /* GetShortLinkUseCase.swift */; };
+		E67BC0BD2AEAD4C500C6F742 /* CreateShortLinkUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67BC0BC2AEAD4C500C6F742 /* CreateShortLinkUseCase.swift */; };
 		E67BC0C32AEAD58F00C6F742 /* BuildConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67BC0C22AEAD58F00C6F742 /* BuildConfig.swift */; };
 		E67BC0C52AEAD6C300C6F742 /* NetworkClientBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67BC0C42AEAD6C300C6F742 /* NetworkClientBuilder.swift */; };
 		E67BC0C72AEAD95E00C6F742 /* URL+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67BC0C62AEAD95E00C6F742 /* URL+Extension.swift */; };
@@ -64,8 +64,8 @@
 		E67BC0B32AEAD41900C6F742 /* HomeRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRemoteDataSource.swift; sourceTree = "<group>"; };
 		E67BC0B52AEAD42400C6F742 /* HomeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRepository.swift; sourceTree = "<group>"; };
 		E67BC0B82AEAD48F00C6F742 /* HomeDomainModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDomainModels.swift; sourceTree = "<group>"; };
-		E67BC0BA2AEAD4B800C6F742 /* GetShortUrlsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetShortUrlsUseCase.swift; sourceTree = "<group>"; };
-		E67BC0BC2AEAD4C500C6F742 /* CreateShortUrlUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateShortUrlUseCase.swift; sourceTree = "<group>"; };
+		E67BC0BA2AEAD4B800C6F742 /* GetShortLinkUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetShortLinkUseCase.swift; sourceTree = "<group>"; };
+		E67BC0BC2AEAD4C500C6F742 /* CreateShortLinkUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateShortLinkUseCase.swift; sourceTree = "<group>"; };
 		E67BC0C12AEAD57800C6F742 /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
 		E67BC0C22AEAD58F00C6F742 /* BuildConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildConfig.swift; sourceTree = "<group>"; };
 		E67BC0C42AEAD6C300C6F742 /* NetworkClientBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClientBuilder.swift; sourceTree = "<group>"; };
@@ -219,8 +219,8 @@
 			isa = PBXGroup;
 			children = (
 				E67BC0B72AEAD47F00C6F742 /* model */,
-				E67BC0BA2AEAD4B800C6F742 /* GetShortUrlsUseCase.swift */,
-				E67BC0BC2AEAD4C500C6F742 /* CreateShortUrlUseCase.swift */,
+				E67BC0BA2AEAD4B800C6F742 /* GetShortLinkUseCase.swift */,
+				E67BC0BC2AEAD4C500C6F742 /* CreateShortLinkUseCase.swift */,
 			);
 			path = domain;
 			sourceTree = "<group>";
@@ -437,9 +437,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				E67BC0B62AEAD42400C6F742 /* HomeRepository.swift in Sources */,
-				E67BC0BB2AEAD4B800C6F742 /* GetShortUrlsUseCase.swift in Sources */,
+				E67BC0BB2AEAD4B800C6F742 /* GetShortLinkUseCase.swift in Sources */,
 				E67BC0B22AEAD40A00C6F742 /* HomeRemoteModels.swift in Sources */,
-				E67BC0BD2AEAD4C500C6F742 /* CreateShortUrlUseCase.swift in Sources */,
+				E67BC0BD2AEAD4C500C6F742 /* CreateShortLinkUseCase.swift in Sources */,
 				E67BC0772AEACD9A00C6F742 /* HomeView.swift in Sources */,
 				E67BC0C72AEAD95E00C6F742 /* URL+Extension.swift in Sources */,
 				E67BC0B92AEAD48F00C6F742 /* HomeDomainModels.swift in Sources */,
