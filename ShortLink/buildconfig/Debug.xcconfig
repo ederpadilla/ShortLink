@@ -7,3 +7,5 @@
 
 // Configuration settings file format documentation can be found at:
 // https://help.apple.com/xcode/#/dev745c5c974
+
+ENVIRONMENT_URL = https:/$()/url-shortener-server.onrender.com/api/alias

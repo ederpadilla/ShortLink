@@ -6,3 +6,11 @@
 //
 
 import Foundation
+
+struct BuildConfig {
+    
+    static let environment: URL = {
+        let stringURL = Bundle.main.infoDictionary?["ENVIRONMENT_URL"] as? String
+        return URL(safeString: stringURL.orDefaultString())
+    }()
+}
