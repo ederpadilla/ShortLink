@@ -6,3 +6,9 @@
 //
 
 import Foundation
+
+struct ShortLinkUI {
+    var shortVersion: String
+    var alias: String
+    var original: String
+}
