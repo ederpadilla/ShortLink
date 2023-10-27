@@ -7,8 +7,8 @@
 
 import Foundation
 
-struct ShortLinkUI {
+struct ShortLinkUI: Identifiable {
     var shortVersion: String
-    var alias: String
+    var id: String
     var original: String
 }

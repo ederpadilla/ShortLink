@@ -21,7 +21,7 @@ extension ShortLink {
     
     func asShortLinkUI() -> ShortLinkUI {
         ShortLinkUI(shortVersion: String(localized: "Shortener Version Des \(linkInfo.short)"),
-                    alias: String(localized: "Alias Des \(alias)"),
+                    id: String(localized: "Alias Des \(alias)"),
                     original: String(localized: "Original Des \(linkInfo.original)"))
     }
 }
