@@ -11,17 +11,35 @@ struct ShortLinkView: View {
     
     @StateObject var viewModel: ShortLinkViewModel
     
+    @State private var texto = ""
+    
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            
+            HStack {
+                TextField("Ingresa tu texto", text: $texto)
+                    .padding(10)
+                    .background(Color(UIColor.systemGray6))
+                    .cornerRadius(10)
+                    .frame(maxWidth: .infinity)
+
+                Button(action: {
+                    // Agrega aquí la lógica para enviar el texto
+                    print("Texto enviado: \(texto)")
+                }) {
+                    Text("Enviar")
+                        .font(.headline)
+                        .foregroundColor(.white)
+                        .padding()
+                        .background(Color.blue)
+                        .cornerRadius(10)
+                }
+                .frame(width: 80) // Ancho del botón
+            }
+            .padding(.horizontal, 20)
         }
-        .onAppear(perform: {
-            createShortLink()
-        })
         .padding()
+        Spacer()
     }
     
     func createShortLink() {
