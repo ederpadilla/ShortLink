@@ -10,6 +10,7 @@
 		E6555C572AEC266B002B3C44 /* ToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6555C562AEC266B002B3C44 /* ToastView.swift */; };
 		E6555C592AEC269B002B3C44 /* CGFloat+Spacing.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6555C582AEC269B002B3C44 /* CGFloat+Spacing.swift */; };
 		E6555C5D2AEC389F002B3C44 /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6555C5C2AEC389F002B3C44 /* View+Extension.swift */; };
+		E6555C5F2AEC3BFC002B3C44 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = E6555C5E2AEC3BFC002B3C44 /* Localizable.xcstrings */; };
 		E67BC0752AEACD9A00C6F742 /* ShortLinkApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67BC0742AEACD9A00C6F742 /* ShortLinkApp.swift */; };
 		E67BC0772AEACD9A00C6F742 /* ShortLinkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67BC0762AEACD9A00C6F742 /* ShortLinkView.swift */; };
 		E67BC0792AEACD9C00C6F742 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E67BC0782AEACD9C00C6F742 /* Assets.xcassets */; };
@@ -52,6 +53,7 @@
 		E6555C562AEC266B002B3C44 /* ToastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastView.swift; sourceTree = "<group>"; };
 		E6555C582AEC269B002B3C44 /* CGFloat+Spacing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+Spacing.swift"; sourceTree = "<group>"; };
 		E6555C5C2AEC389F002B3C44 /* View+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
+		E6555C5E2AEC3BFC002B3C44 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		E67BC0712AEACD9A00C6F742 /* ShortLink.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShortLink.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E67BC0742AEACD9A00C6F742 /* ShortLinkApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortLinkApp.swift; sourceTree = "<group>"; };
 		E67BC0762AEACD9A00C6F742 /* ShortLinkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortLinkView.swift; sourceTree = "<group>"; };
@@ -308,6 +310,7 @@
 				E67BC0C62AEAD95E00C6F742 /* URL+Extension.swift */,
 				E67BC0C82AEAD9B300C6F742 /* String+Extension.swift */,
 				E6555C582AEC269B002B3C44 /* CGFloat+Spacing.swift */,
+				E6555C5E2AEC3BFC002B3C44 /* Localizable.xcstrings */,
 			);
 			path = core;
 			sourceTree = "<group>";
@@ -418,6 +421,7 @@
 			files = (
 				E67BC07C2AEACD9C00C6F742 /* Preview Assets.xcassets in Resources */,
 				E67BC0792AEACD9C00C6F742 /* Assets.xcassets in Resources */,
+				E6555C5F2AEC3BFC002B3C44 /* Localizable.xcstrings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
