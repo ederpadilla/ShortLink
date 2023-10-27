@@ -24,4 +24,8 @@ enum ShortLinkInjector {
     private static func provideShortLinkViewModel() -> ShortLinkViewModel {
         ShortLinkViewModel(createShortLinkUseCase: provideCreateShortLinkUseCase())
     }
+    
+    static func provideShortLinkView() -> ShortLinkView {
+        ShortLinkView(viewModel: provideShortLinkViewModel())
+    }
 }

@@ -11,7 +11,7 @@ import SwiftUI
 struct ShortLinkApp: App {
     var body: some Scene {
         WindowGroup {
-            ShortLinkView()
+            ShortLinkInjector.provideShortLinkView()
         }
     }
 }

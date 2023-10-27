@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct ShortLinkView: View {
+    
+    @StateObject var viewModel: ShortLinkViewModel
+    
     var body: some View {
         VStack {
             Image(systemName: "globe")
@@ -22,17 +25,10 @@ struct ShortLinkView: View {
     }
     
     func createShortLink() {
-        Task {
-            do {
-                let response = try await CreateShortLinkRemoteDataSource().createShortLink(URL(safeString: "https://www.facebook.com"))
-                print("resposne \(response)")
-            } catch {
-                print("error \(error)")
-            }
-        }
+        viewModel.createShortLink(url: URL(safeString: "https://www.facebook.com"))
     }
 }
 
 #Preview {
-    ShortLinkView()
+    ShortLinkInjector.provideShortLinkView()
 }
