@@ -7,22 +7,25 @@
 
 import SwiftUI
 
-struct ToastView<Content>: View where Content: View {
+struct ToastView: View {
     
     @Binding var isPresented: Bool
-    let content: Content
+    let message: String
     
-    init(isPresented: Binding<Bool>, @ViewBuilder content: () -> Content) {
+    init(isPresented: Binding<Bool>, message: String) {
         self._isPresented = isPresented
-        self.content = content()
+        self.message = message
     }
     
     var body: some View {
         if isPresented {
-            content
-                .padding(EdgeInsets(top: 4, leading: 24, bottom: 4, trailing: 24))
+            Text(message)
+                .padding(EdgeInsets(top: .point4,
+                                    leading: .point24,
+                                    bottom: .point4,
+                                    trailing: .point24))
                 .background(Color.secondary)
-                .foregroundColor(.white) //AVaV25*GdgJs4u4
+                .foregroundColor(.white)
                 .cornerRadius(.point10)
                 .transition(.opacity)
                 .onAppear {

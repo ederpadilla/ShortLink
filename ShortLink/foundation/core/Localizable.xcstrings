@@ -1,11 +1,16 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
-    "¡Este es un Toast!" : {
-
-    },
-    "Ingresa tu texto" : {
-
+    "Insert URL Shortener" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Insert URL to shortener"
+          }
+        }
+      }
     },
     "Short Link Title" : {
       "extractionState" : "manual",

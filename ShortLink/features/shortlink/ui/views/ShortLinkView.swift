@@ -21,7 +21,8 @@ struct ShortLinkView: View {
                 VStack {
                     
                     HStack {
-                        TextField("Ingresa tu texto", text: $texto)
+                        TextField(String(localized:"Insert URL Shortener"),
+                                  text: $texto)
                             .frame(maxWidth: .infinity, maxHeight: .infinity)
                             .padding(.point10)
                             .background(Color(UIColor.systemGray6))
@@ -51,9 +52,8 @@ struct ShortLinkView: View {
                 }
                 .navigationTitle(String(localized: "Short Link Title"))
                 .overlay {
-                    ToastView(isPresented: $showToast) {
-                        Text("¡Este es un Toast!")
-                    }
+                    ToastView(isPresented: $showToast,
+                              message: "¡Este es un Toast!")
                 }
             }
             
