@@ -10,4 +10,5 @@ import Foundation
 extension CGFloat {
     
     static var point10: CGFloat { return 10 }
+    static var point40: CGFloat { return 40 }
 }

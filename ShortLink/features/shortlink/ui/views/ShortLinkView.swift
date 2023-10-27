@@ -18,25 +18,24 @@ struct ShortLinkView: View {
             
             HStack {
                 TextField("Ingresa tu texto", text: $texto)
-                    .padding(10)
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    .padding(.point10)
                     .background(Color(UIColor.systemGray6))
-                    .cornerRadius(10)
-                    .frame(maxWidth: .infinity)
+                    .cornerRadius(.point10)
                 
                 Button(action: {
-                    // Agrega aquí la lógica para enviar el texto
                     print("Texto enviado: \(texto)")
                 }) {
-                    Text("Enviar")
+                    Image(systemName: "paperplane.fill")
                         .font(.headline)
                         .foregroundColor(.white)
                         .padding()
                         .background(Color.blue)
-                        .cornerRadius(10)
+                        .cornerRadius(.point10)
                 }
-                .frame(width: 80) // Ancho del botón
+                .frame(maxHeight: .infinity)
             }
-            .padding(.horizontal, 20)
+            .frame(maxWidth: .infinity, maxHeight: .point40)
         }
         .padding()
         .overlay(
@@ -45,7 +44,7 @@ struct ShortLinkView: View {
             }
         )
         Spacer()
-            
+        
     }
     
     func createShortLink() {

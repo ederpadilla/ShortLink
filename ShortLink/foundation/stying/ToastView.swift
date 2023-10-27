@@ -20,10 +20,10 @@ struct ToastView<Content>: View where Content: View {
     var body: some View {
         if isPresented {
             content
+                .padding(EdgeInsets(top: 4, leading: 24, bottom: 4, trailing: 24))
                 .background(Color.secondary)
-                .foregroundColor(.white)
+                .foregroundColor(.white) //AVaV25*GdgJs4u4
                 .cornerRadius(.point10)
-                .padding()
                 .transition(.opacity)
                 .onAppear {
                     DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
