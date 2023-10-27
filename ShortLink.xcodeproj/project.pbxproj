@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		E6555C572AEC266B002B3C44 /* ToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6555C562AEC266B002B3C44 /* ToastView.swift */; };
 		E6555C592AEC269B002B3C44 /* CGFloat+Spacing.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6555C582AEC269B002B3C44 /* CGFloat+Spacing.swift */; };
+		E6555C5D2AEC389F002B3C44 /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6555C5C2AEC389F002B3C44 /* View+Extension.swift */; };
 		E67BC0752AEACD9A00C6F742 /* ShortLinkApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67BC0742AEACD9A00C6F742 /* ShortLinkApp.swift */; };
 		E67BC0772AEACD9A00C6F742 /* ShortLinkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67BC0762AEACD9A00C6F742 /* ShortLinkView.swift */; };
 		E67BC0792AEACD9C00C6F742 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E67BC0782AEACD9C00C6F742 /* Assets.xcassets */; };
@@ -50,6 +51,7 @@
 /* Begin PBXFileReference section */
 		E6555C562AEC266B002B3C44 /* ToastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastView.swift; sourceTree = "<group>"; };
 		E6555C582AEC269B002B3C44 /* CGFloat+Spacing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+Spacing.swift"; sourceTree = "<group>"; };
+		E6555C5C2AEC389F002B3C44 /* View+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
 		E67BC0712AEACD9A00C6F742 /* ShortLink.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShortLink.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E67BC0742AEACD9A00C6F742 /* ShortLinkApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortLinkApp.swift; sourceTree = "<group>"; };
 		E67BC0762AEACD9A00C6F742 /* ShortLinkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortLinkView.swift; sourceTree = "<group>"; };
@@ -287,6 +289,7 @@
 			isa = PBXGroup;
 			children = (
 				E6555C562AEC266B002B3C44 /* ToastView.swift */,
+				E6555C5C2AEC389F002B3C44 /* View+Extension.swift */,
 			);
 			path = stying;
 			sourceTree = "<group>";
@@ -442,6 +445,7 @@
 				E6555C592AEC269B002B3C44 /* CGFloat+Spacing.swift in Sources */,
 				E67BC0B62AEAD42400C6F742 /* ShortLinkRepository.swift in Sources */,
 				E67BC0B22AEAD40A00C6F742 /* CreateShortLinkRemoteModels.swift in Sources */,
+				E6555C5D2AEC389F002B3C44 /* View+Extension.swift in Sources */,
 				E67BC0BD2AEAD4C500C6F742 /* CreateShortLinkUseCase.swift in Sources */,
 				E67BC0772AEACD9A00C6F742 /* ShortLinkView.swift in Sources */,
 				E6555C572AEC266B002B3C44 /* ToastView.swift in Sources */,
