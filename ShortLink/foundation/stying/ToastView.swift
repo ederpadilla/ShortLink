@@ -9,17 +9,11 @@ import SwiftUI
 
 struct ToastView: View {
     
-    @Binding var isPresented: Bool
-    let message: String
-    
-    init(isPresented: Binding<Bool>, message: String) {
-        self._isPresented = isPresented
-        self.message = message
-    }
+    @Binding var toast: Toast
     
     var body: some View {
-        if isPresented {
-            Text(message)
+        if toast.isShowing {
+            Text(toast.message)
                 .padding(EdgeInsets(top: .point4,
                                     leading: .point24,
                                     bottom: .point4,
@@ -31,10 +25,15 @@ struct ToastView: View {
                 .onAppear {
                     DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
                         withAnimation {
-                            isPresented.toggle()
+                            toast.isShowing.toggle()
                         }
                     }
                 }
         }
     }
+}
+
+struct Toast {
+    var isShowing: Bool
+    var message: String
 }

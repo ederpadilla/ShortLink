@@ -11,7 +11,7 @@ struct ShortLinkView: View {
     
     @StateObject var viewModel: ShortLinkViewModel
     @State private var texto = ""
-    @State private var showToast = true
+    @State private var toast = Toast(isShowing: true, message: "¡Este es un Toast!")
     
     var body: some View {
         
@@ -51,10 +51,7 @@ struct ShortLinkView: View {
                     Spacer()
                 }
                 .navigationTitle(String(localized: "Short Link Title"))
-                .overlay {
-                    ToastView(isPresented: $showToast,
-                              message: "¡Este es un Toast!")
-                }
+                .overlay { ToastView(toast: $toast) }
             }
             
         }
