@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E6555C572AEC266B002B3C44 /* ToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6555C562AEC266B002B3C44 /* ToastView.swift */; };
+		E6555C592AEC269B002B3C44 /* CGFloat+Spacing.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6555C582AEC269B002B3C44 /* CGFloat+Spacing.swift */; };
 		E67BC0752AEACD9A00C6F742 /* ShortLinkApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67BC0742AEACD9A00C6F742 /* ShortLinkApp.swift */; };
 		E67BC0772AEACD9A00C6F742 /* ShortLinkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67BC0762AEACD9A00C6F742 /* ShortLinkView.swift */; };
 		E67BC0792AEACD9C00C6F742 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E67BC0782AEACD9C00C6F742 /* Assets.xcassets */; };
@@ -46,6 +48,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E6555C562AEC266B002B3C44 /* ToastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastView.swift; sourceTree = "<group>"; };
+		E6555C582AEC269B002B3C44 /* CGFloat+Spacing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+Spacing.swift"; sourceTree = "<group>"; };
 		E67BC0712AEACD9A00C6F742 /* ShortLink.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShortLink.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E67BC0742AEACD9A00C6F742 /* ShortLinkApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortLinkApp.swift; sourceTree = "<group>"; };
 		E67BC0762AEACD9A00C6F742 /* ShortLinkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortLinkView.swift; sourceTree = "<group>"; };
@@ -282,6 +286,7 @@
 		E67BC0BE2AEAD51000C6F742 /* stying */ = {
 			isa = PBXGroup;
 			children = (
+				E6555C562AEC266B002B3C44 /* ToastView.swift */,
 			);
 			path = stying;
 			sourceTree = "<group>";
@@ -299,6 +304,7 @@
 			children = (
 				E67BC0C62AEAD95E00C6F742 /* URL+Extension.swift */,
 				E67BC0C82AEAD9B300C6F742 /* String+Extension.swift */,
+				E6555C582AEC269B002B3C44 /* CGFloat+Spacing.swift */,
 			);
 			path = core;
 			sourceTree = "<group>";
@@ -433,10 +439,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E6555C592AEC269B002B3C44 /* CGFloat+Spacing.swift in Sources */,
 				E67BC0B62AEAD42400C6F742 /* ShortLinkRepository.swift in Sources */,
 				E67BC0B22AEAD40A00C6F742 /* CreateShortLinkRemoteModels.swift in Sources */,
 				E67BC0BD2AEAD4C500C6F742 /* CreateShortLinkUseCase.swift in Sources */,
 				E67BC0772AEACD9A00C6F742 /* ShortLinkView.swift in Sources */,
+				E6555C572AEC266B002B3C44 /* ToastView.swift in Sources */,
 				E67BC0C72AEAD95E00C6F742 /* URL+Extension.swift in Sources */,
 				E67BC0B92AEAD48F00C6F742 /* ShortLinkDomainModels.swift in Sources */,
 				E67BC0C32AEAD58F00C6F742 /* BuildConfig.swift in Sources */,

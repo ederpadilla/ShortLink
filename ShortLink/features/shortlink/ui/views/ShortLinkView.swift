@@ -10,8 +10,8 @@ import SwiftUI
 struct ShortLinkView: View {
     
     @StateObject var viewModel: ShortLinkViewModel
-    
     @State private var texto = ""
+    @State private var showToast = true
     
     var body: some View {
         VStack {
@@ -22,7 +22,7 @@ struct ShortLinkView: View {
                     .background(Color(UIColor.systemGray6))
                     .cornerRadius(10)
                     .frame(maxWidth: .infinity)
-
+                
                 Button(action: {
                     // Agrega aquí la lógica para enviar el texto
                     print("Texto enviado: \(texto)")
@@ -39,7 +39,13 @@ struct ShortLinkView: View {
             .padding(.horizontal, 20)
         }
         .padding()
+        .overlay(
+            ToastView(isPresented: $showToast) {
+                Text("¡Este es un Toast!")
+            }
+        )
         Spacer()
+            
     }
     
     func createShortLink() {
