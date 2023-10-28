@@ -19,9 +19,9 @@ struct LinkInfo {
 
 extension ShortLink {
     
-    func asShortLinkUI() -> ShortLinkUI {
-        ShortLinkUI(shortVersion: String(localized: "Shortener Version Des \(linkInfo.short)"),
-                    id: String(localized: "Alias Des \(alias)"),
-                    original: String(localized: "Original Des \(linkInfo.original)"))
+    func asShortLinkUI() -> ShortLinkItemUI {
+        ShortLinkItemUI(shortVersion: String(localized: "Short Version \(linkInfo.short)"),
+                        id: String(localized: "Alias Des \(alias)"),
+                        original: String(localized: "Original Des \(linkInfo.original)"))
     }
 }

@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct ShortLinkUI: Identifiable {
+struct ShortLinkItemUI: Identifiable {
     var shortVersion: String
     var id: String
     var original: String

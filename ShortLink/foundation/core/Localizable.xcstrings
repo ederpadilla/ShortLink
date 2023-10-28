@@ -1,22 +1,15 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
-    "·%@" : {
-
-    },
-    "Alias Des" : {
-      "extractionState" : "manual",
+    "Alias Des %@" : {
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "· Alias:  %@"
+            "value" : "· id: %@"
           }
         }
       }
-    },
-    "Alias Des %@" : {
-
     },
     "Insert URL Shortener" : {
       "extractionState" : "manual",
@@ -29,19 +22,15 @@
         }
       }
     },
-    "Original Des" : {
-      "extractionState" : "manual",
+    "Original Des %@" : {
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "· Original:  %@"
+            "value" : "· Original: %@"
           }
         }
       }
-    },
-    "Original Des %@" : {
-
     },
     "Short Link Title" : {
       "extractionState" : "manual",
@@ -54,19 +43,16 @@
         }
       }
     },
-    "Shortener Version Des" : {
+    "Short Version %@" : {
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "· Shortener version: %@"
+            "value" : "·  %@"
           }
         }
       }
-    },
-    "Shortener Version Des %@" : {
-
     }
   },
   "version" : "1.0"

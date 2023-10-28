@@ -12,10 +12,16 @@ struct ShortLinkView: View {
     @StateObject var viewModel: ShortLinkViewModel
     @State private var texto = ""
     @State private var toast = Toast(isShowing: true, message: "¡Este es un Toast!")
-    let items: [Item] = [
-        Item(name: "John Doe", id: "1234", original: "Original 1"),
-        Item(name: "Jane Smith", id: "5678", original: "Original 2"),
-        // Agrega más elementos aquí
+    let items: [ShortLink] = [
+        ShortLink(alias: "1234121qwqwe3",
+                  linkInfo: LinkInfo(original: "www.facebookddasd.com",
+                                     short: "https:uasdasdkasasa.com")),
+        ShortLink(alias: "12ds34121qwqwe3",
+                  linkInfo: LinkInfo(original: "www.facebookd.com",
+                                     short: "https:uassasa.com")),
+        ShortLink(alias: "12dwwe3",
+                  linkInfo: LinkInfo(original: "www.google.com",
+                                     short: "https:aaaauassasa.com"))
     ]
     
     var body: some View {
@@ -54,11 +60,7 @@ struct ShortLinkView: View {
                                         bottom: .point0,
                                         trailing: .point16))
                     
-                    
-                    List(items) { item in
-                        ShortLinkItemView(item: item)
-                    }
-                    .listStyle(PlainListStyle())
+                    ShortLinkListView(shortLinks: items.map { $0.asShortLinkUI() })
                     
                 }
                 .navigationTitle(String(localized: "Short Link Title"))
@@ -75,44 +77,6 @@ struct ShortLinkView: View {
     
 }
 
-struct Item: Identifiable {
-    var name: String
-    var id: String
-    var original: String
-}
-
 #Preview {
     ShortLinkInjector.provideShortLinkView()
-}
-
-struct ShortLinkItemView: View {
-    
-    let item: Item
-    
-    var body: some View {
-        
-        ZStack {
-            VStack {
-                Text("·\(item.name)")
-                    .font(.system(size: .point16, weight: .bold))
-                    .foregroundColor(.white)
-                    .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, alignment: .leading)
-                
-                Text("·\(item.id)")
-                    .font(.system(size: .point14))
-                    .foregroundColor(.gray)
-                    .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, alignment: .leading)
-                
-                Text("·\(item.original)")
-                    .font(.system(size: .point14))
-                    .foregroundColor(.gray)
-                    .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, alignment: .leading)
-            }
-            .padding(.point10)
-        }
-        .background(
-            RoundedRectangle(cornerRadius: .point10)
-                .stroke(Color(UIColor.systemGray2), lineWidth: .point1)
-        )
-    }
 }

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E636E3842AEC62C6004291C6 /* ShortLinkListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E636E3832AEC62C6004291C6 /* ShortLinkListView.swift */; };
+		E636E3862AEC6321004291C6 /* ShortLinkItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E636E3852AEC6321004291C6 /* ShortLinkItemView.swift */; };
 		E6555C572AEC266B002B3C44 /* ToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6555C562AEC266B002B3C44 /* ToastView.swift */; };
 		E6555C592AEC269B002B3C44 /* CGFloat+Spacing.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6555C582AEC269B002B3C44 /* CGFloat+Spacing.swift */; };
 		E6555C5D2AEC389F002B3C44 /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6555C5C2AEC389F002B3C44 /* View+Extension.swift */; };
@@ -50,6 +52,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E636E3832AEC62C6004291C6 /* ShortLinkListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortLinkListView.swift; sourceTree = "<group>"; };
+		E636E3852AEC6321004291C6 /* ShortLinkItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortLinkItemView.swift; sourceTree = "<group>"; };
 		E6555C562AEC266B002B3C44 /* ToastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastView.swift; sourceTree = "<group>"; };
 		E6555C582AEC269B002B3C44 /* CGFloat+Spacing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+Spacing.swift"; sourceTree = "<group>"; };
 		E6555C5C2AEC389F002B3C44 /* View+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
@@ -258,6 +262,8 @@
 			isa = PBXGroup;
 			children = (
 				E67BC0762AEACD9A00C6F742 /* ShortLinkView.swift */,
+				E636E3832AEC62C6004291C6 /* ShortLinkListView.swift */,
+				E636E3852AEC6321004291C6 /* ShortLinkItemView.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -453,6 +459,7 @@
 				E67BC0BD2AEAD4C500C6F742 /* CreateShortLinkUseCase.swift in Sources */,
 				E67BC0772AEACD9A00C6F742 /* ShortLinkView.swift in Sources */,
 				E6555C572AEC266B002B3C44 /* ToastView.swift in Sources */,
+				E636E3842AEC62C6004291C6 /* ShortLinkListView.swift in Sources */,
 				E67BC0C72AEAD95E00C6F742 /* URL+Extension.swift in Sources */,
 				E67BC0B92AEAD48F00C6F742 /* ShortLinkDomainModels.swift in Sources */,
 				E67BC0C32AEAD58F00C6F742 /* BuildConfig.swift in Sources */,
@@ -463,6 +470,7 @@
 				E67BC0752AEACD9A00C6F742 /* ShortLinkApp.swift in Sources */,
 				E67BC0C92AEAD9B300C6F742 /* String+Extension.swift in Sources */,
 				E67BC0AB2AEAD36C00C6F742 /* ShortLinkViewModel.swift in Sources */,
+				E636E3862AEC6321004291C6 /* ShortLinkItemView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
