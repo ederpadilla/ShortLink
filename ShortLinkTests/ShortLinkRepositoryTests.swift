@@ -78,7 +78,7 @@ final class ShortLinkRepositoryTests: XCTestCase {
         let useCase = CreateShortLinkUseCase(shortLinkRepo: mockRepo)
         
         do {
-            let result = try await useCase.createShortLink(URL(string: url)!)
+            let _ = try await useCase.createShortLink(URL(string: url)!)
             XCTFail("Should throw NetworkError.timeout")
         } catch {
             XCTAssertTrue((error as? NetworkError) == .timeout)
