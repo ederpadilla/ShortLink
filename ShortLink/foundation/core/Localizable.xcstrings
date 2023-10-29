@@ -11,13 +11,79 @@
         }
       }
     },
-    "Empty URL" : {
+    "Error Empty URL" : {
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "URL cannot be empty. Please enter a valid URL."
+          }
+        }
+      }
+    },
+    "Error Invalid Request" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Invalid request data. Make sure you've entered a valid URL."
+          }
+        }
+      }
+    },
+    "Error Invalid Response" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "\"Invalid response from the server. Please try again later.\""
+          }
+        }
+      }
+    },
+    "Error Invalid Status Code" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Invalid status code received from the server. Please try again later."
+          }
+        }
+      }
+    },
+    "Error Invalid URL" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The URL is invalid."
+          }
+        }
+      }
+    },
+    "Error No Internet" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No internet connection. Please check your network settings and try again."
+          }
+        }
+      }
+    },
+    "Error Unknown" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "An unknown error occurred. Please contact support for assistance."
           }
         }
       }
@@ -29,17 +95,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Insert URL to shortener"
-          }
-        }
-      }
-    },
-    "Invalid URL" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "The URL is invalid."
           }
         }
       }

@@ -16,28 +16,66 @@ class ShortLinkViewModel: ObservableObject {
         self.createShortLinkUseCase = createShortLinkUseCase
     }
     
-    func createShortLink(urlString: String) {
-        guard !urlString.isEmpty else {
-            shortLinkUi.toast = Toast(isShowing: true, message: String(localized: "Empty URL"))
-            return
-        }
-        
-        guard let url = URL(string: urlString), url.scheme != nil, url.host != nil else {
-            shortLinkUi.toast = Toast(isShowing: true, message: String(localized: "Invalid URL"))
-            return
-        }
-        
+    func createShortLink(_ urlString: String) {
+        shortLinkUi.isLoading = true
         Task {
             do {
+                let url = try validateURL(urlString)
                 let shortLink = try await createShortLinkUseCase.createShortLink(url)
                 await MainActor.run {
-                    print("shortLink \(shortLink)")
+                    handleCreateShortLinkSuccess(shortLink)
                 }
             } catch {
                 await MainActor.run {
-                    print("error \(error)")
+                    handleCreateShortLinkError(error)
                 }
             }
         }
     }
+    
+    private func validateURL(_ urlString: String) throws -> URL {
+        guard !urlString.isEmpty else {
+            shortLinkUi.toast = Toast(isShowing: true, message: String(localized: "Empty URL"))
+            throw ShortLinkError.emptyURL
+        }
+        
+        guard let url = URL(string: urlString), url.scheme != nil, url.host != nil else {
+            shortLinkUi.toast = Toast(isShowing: true, message: String(localized: "Invalid URL"))
+            throw ShortLinkError.invalidURL
+        }
+        return url
+    }
+    
+    private func handleCreateShortLinkSuccess(_ shortLink: ShortLink) {
+        shortLinkUi.shortLinkItems.insert(shortLink.asShortLinkUI(), at: .zero)
+        shortLinkUi.isLoading = false
+    }
+    
+    private func handleCreateShortLinkError(_ error: Error) {
+        print("meal detail \(error)")
+        shortLinkUi.isLoading = false
+        shortLinkUi.toast.message =
+        switch error {
+        case ShortLinkError.emptyURL:
+            String(localized: "Error Empty URL")
+        case ShortLinkError.invalidURL:
+            String(localized: "Error Invalid URL")
+        case NetworkError.noInternetConnection:
+            String(localized: "Error No Internet")
+        case NetworkError.invalidRequestData:
+            String(localized: "Error Invalid Request")
+        case NetworkError.invalidResponse:
+            String(localized: "Error Invalid Response")
+        case NetworkError.invalidStatusCode:
+            String(localized: "Error Invalid Status Code")
+        default:
+            String(localized: "Error Unknown")
+        }
+        shortLinkUi.toast.isShowing = true
+    }
+}
+
+enum ShortLinkError: Error {
+    case emptyURL
+    case invalidURL
 }

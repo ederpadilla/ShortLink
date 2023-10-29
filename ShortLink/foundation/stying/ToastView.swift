@@ -34,6 +34,6 @@ struct ToastView: View {
 }
 
 struct Toast {
-    var isShowing: Bool
-    var message: String
+    var isShowing: Bool = false
+    var message: String = .empty
 }
