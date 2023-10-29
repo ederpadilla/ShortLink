@@ -9,28 +9,97 @@ import XCTest
 @testable import ShortLink
 
 final class ShortLinkTests: XCTestCase {
-
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
-    }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+    let url = "https://google.com"
+    
+    func testCreateShortLinkSuccess() async {
+        let shortLink = ShortLink(alias: "testAlias", linkInfo: LinkInfo(original: "testOriginal", short: "testShort"))
+        let mockRepo = MockShortLinkRepository(result: .success(shortLink))
+        let useCase = CreateShortLinkUseCase(shortLinkRepo: mockRepo)
+        
+        
+        do {
+            let result = try await useCase.createShortLink(URL(string: url)!)
+            
+            XCTAssertEqual(result.linkInfo.original, shortLink.linkInfo.original)
+        } catch {
+            XCTFail("Unexpected error: \(error)")
         }
     }
+    
+    func testCreateShortLinkInvalidResponse() async {
+        
+        let mockRepo = MockShortLinkRepository(result: .failure(NetworkError.invalidResponse))
+        
+        
+        do {
+            let _ = try await mockRepo.createShortLink(URL(string: url)!)
+            XCTFail("Should throw NetworkError.invalidResponse")
+        } catch {
+            XCTAssertTrue((error as? NetworkError) == .invalidResponse)
+        }
+    }
+    
+    func testCreateShortLinkInvalidRequestData() async {
+        
+        let mockRepo = MockShortLinkRepository(result: .failure(NetworkError.invalidRequestData))
+        
+        do {
+            let _ = try await mockRepo.createShortLink(URL(string: url)!)
+            XCTFail("Should throw NetworkError.invalidRequestData")
+        } catch {
+            XCTAssertTrue((error as? NetworkError) == .invalidRequestData)
+        }
+    }
+    
+    func testCreateShortLinkInvalidStatusCode() async {
+        let mockRepo = MockShortLinkRepository(result: .failure(NetworkError.invalidStatusCode))
+        
+        do {
+            let _ = try await mockRepo.createShortLink(URL(string: url)!)
+            XCTFail("Should throw NetworkError.invalidStatusCode")
+        } catch {
+            XCTAssertTrue((error as? NetworkError) == .invalidStatusCode)
+        }
+    }
+    
+    func testCreateShortLinkNoInternetConnection() async {
+        let mockRepo = MockShortLinkRepository(result: .failure(NetworkError.noInternetConnection))
+        
+        do {
+            let _ = try await mockRepo.createShortLink(URL(string: url)!)
+            XCTFail("Should throw NetworkError.noInternetConnection")
+        } catch {
+            XCTAssertTrue((error as? NetworkError) == .noInternetConnection)
+        }
+    }
+    
+    func testCreateShortLinkTimeoutError() async {
+        let mockRepo = MockShortLinkRepository(result: .failure(NetworkError.timeout))
+        let useCase = CreateShortLinkUseCase(shortLinkRepo: mockRepo)
+        
+        do {
+            let result = try await useCase.createShortLink(URL(string: url)!)
+            XCTFail("Should throw NetworkError.timeout")
+        } catch {
+            XCTAssertTrue((error as? NetworkError) == .timeout)
+        }
+    }
+    
+}
 
+class MockShortLinkRepository: ShortLinkRepo {
+    let result: Result<ShortLink, NetworkError>
+    
+    init(result: Result<ShortLink, NetworkError>) {
+        self.result = result
+    }
+    
+    func createShortLink(_ url: URL) async throws -> ShortLink {
+        switch result {
+        case .success(let shortLink):
+            return shortLink
+        case .failure(let error):
+            throw error
+        }
+    }
 }

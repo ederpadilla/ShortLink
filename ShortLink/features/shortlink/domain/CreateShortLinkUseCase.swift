@@ -13,13 +13,13 @@ protocol CreateShortLinkUseCaseProtocol {
 
 struct CreateShortLinkUseCase: CreateShortLinkUseCaseProtocol {
     
-    private let shortLinkRepository: ShortLinkRepository
+    private let shortLinkRepo: ShortLinkRepo
     
-    init(shortLinkRepository: ShortLinkRepository) {
-        self.shortLinkRepository = shortLinkRepository
+    init(shortLinkRepo: ShortLinkRepo) {
+        self.shortLinkRepo = shortLinkRepo
     }
     
     func createShortLink(_ url: URL) async throws -> ShortLink {
-        try await shortLinkRepository.createShortLink(url)
+        try await shortLinkRepo.createShortLink(url)
     }
 }
