@@ -7,6 +7,13 @@
 
 import Foundation
 
+struct ShortLinkUi {
+    var isLoading: Bool = true
+    var shortLinkItems: [ShortLinkItemUI] = []
+    var toast = Toast(isShowing: false, message: .empty)
+    var inputURLText: String = .empty
+}
+
 struct ShortLinkItemUI: Identifiable {
     var shortVersion: String
     var id: String

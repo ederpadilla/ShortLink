@@ -10,19 +10,6 @@ import SwiftUI
 struct ShortLinkView: View {
     
     @StateObject var viewModel: ShortLinkViewModel
-    @State private var text = ""
-    @State private var toast = Toast(isShowing: true, message: "¡Este es un Toast!")
-    let items: [ShortLink] = [
-        ShortLink(alias: "1234121qwqwe3",
-                  linkInfo: LinkInfo(original: "www.facebookddasd.com",
-                                     short: "https:uasdasdkasasa.com")),
-        ShortLink(alias: "12ds34121qwqwe3",
-                  linkInfo: LinkInfo(original: "www.facebookd.com",
-                                     short: "https:uassasa.com")),
-        ShortLink(alias: "12dwwe3",
-                  linkInfo: LinkInfo(original: "www.google.com",
-                                     short: "https:aaaauassasa.com"))
-    ]
     
     var body: some View {
         
@@ -31,15 +18,19 @@ struct ShortLinkView: View {
                 
                 VStack {
                     
-                    InputLinkView(text: $text)
+                    InputLinkView(text: $viewModel.shortLinkUi.inputURLText)
                     
-                    ShortLinkListView(shortLinks: items.map { $0.asShortLinkUI() })
+                    ShortLinkListView(shortLinks: viewModel.shortLinkUi.shortLinkItems)
                     
                 }
                 .navigationTitle(String(localized: "Short Link Title"))
-                .overlay { ToastView(toast: $toast) }
+                .overlay { ToastView(toast: $viewModel.shortLinkUi.toast) }
             }
             
+            if viewModel.shortLinkUi.isLoading {
+                ProgressView()
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+            }
         }
     }
     

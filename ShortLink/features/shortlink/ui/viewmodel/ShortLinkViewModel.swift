@@ -9,6 +9,7 @@ import Foundation
 
 class ShortLinkViewModel: ObservableObject {
     
+    @Published var shortLinkUi = ShortLinkUi()
     private let createShortLinkUseCase: CreateShortLinkUseCaseProtocol
     
     init(createShortLinkUseCase: CreateShortLinkUseCaseProtocol) {
