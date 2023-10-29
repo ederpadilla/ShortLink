@@ -59,6 +59,8 @@ class ShortLinkViewModel: ObservableObject {
             String(localized: "Error Invalid URL")
         case NetworkError.noInternetConnection:
             String(localized: "Error No Internet")
+        case NetworkError.timeout:
+            String(localized: "Error Timeout")
         case NetworkError.invalidRequestData:
             String(localized: "Error Invalid Request")
         case NetworkError.invalidResponse:

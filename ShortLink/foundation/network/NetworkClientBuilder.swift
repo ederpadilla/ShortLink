@@ -12,6 +12,7 @@ extension URLSession {
     func post<T: Decodable, E: Encodable>(_ data: E) async throws -> T {
         var request = URLRequest(url: BuildConfig.environment)
         request.httpMethod = NetworkRequest.post.rawValue
+        request.timeoutInterval = 15
         request.addValue(NetworkRequest.application.rawValue, forHTTPHeaderField: NetworkRequest.contentType.rawValue)
         
         do {
@@ -36,13 +37,19 @@ extension URLSession {
             let responseDecoded = try decoder.decode(T.self, from: responseData)
             return responseDecoded
         } catch {
-            throw NetworkError.invalidResponse
+            if let urlError = error as? URLError, urlError.code == .timedOut {
+                throw NetworkError.timeout
+            } else {
+                throw NetworkError.invalidResponse
+            }
         }
     }
     
     func fetch<T: Decodable>(endopoint: String) async throws -> T {
         
-        let (data, response) = try await URLSession.shared.data(from: BuildConfig.environment)
+        var request = URLRequest(url: BuildConfig.environment)
+        request.timeoutInterval = 15
+        let (data, response) = try await URLSession.shared.data(for: request)
         
         guard let httpResponse = response as? HTTPURLResponse else {
             throw NetworkError.noInternetConnection
@@ -57,7 +64,11 @@ extension URLSession {
             let responseDecoded = try decoder.decode(T.self, from: data)
             return responseDecoded
         } catch {
-            throw NetworkError.invalidResponse
+            if let urlError = error as? URLError, urlError.code == .timedOut {
+                throw NetworkError.timeout
+            } else {
+                throw NetworkError.invalidResponse
+            }
         }
     }
 }
@@ -73,6 +84,7 @@ enum NetworkError: Error {
     static let successCode = 200
     case invalidResponse
     case invalidRequestData
+    case timeout
     case invalidStatusCode
     case noInternetConnection
 }

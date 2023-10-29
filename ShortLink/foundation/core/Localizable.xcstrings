@@ -77,6 +77,17 @@
         }
       }
     },
+    "Error Timeout" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Request timed out. Please check your internet connection and try again later."
+          }
+        }
+      }
+    },
     "Error Unknown" : {
       "extractionState" : "manual",
       "localizations" : {
