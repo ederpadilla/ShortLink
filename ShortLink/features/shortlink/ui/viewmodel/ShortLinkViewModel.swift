@@ -35,12 +35,10 @@ class ShortLinkViewModel: ObservableObject {
     
     private func validateURL(_ urlString: String) throws -> URL {
         guard !urlString.isEmpty else {
-            shortLinkUi.toast = Toast(isShowing: true, message: String(localized: "Empty URL"))
             throw ShortLinkError.emptyURL
         }
         
         guard let url = URL(string: urlString), url.scheme != nil, url.host != nil else {
-            shortLinkUi.toast = Toast(isShowing: true, message: String(localized: "Invalid URL"))
             throw ShortLinkError.invalidURL
         }
         return url
