@@ -10,6 +10,7 @@
 		E636E3842AEC62C6004291C6 /* ShortLinkListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E636E3832AEC62C6004291C6 /* ShortLinkListView.swift */; };
 		E636E3862AEC6321004291C6 /* ShortLinkItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E636E3852AEC6321004291C6 /* ShortLinkItemView.swift */; };
 		E639F4CA2AEEC7550034B838 /* InputLinkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E639F4C92AEEC7550034B838 /* InputLinkView.swift */; };
+		E639F4CC2AEEFEC20034B838 /* ShortLinkViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E639F4CB2AEEFEC20034B838 /* ShortLinkViewModelTests.swift */; };
 		E6555C572AEC266B002B3C44 /* ToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6555C562AEC266B002B3C44 /* ToastView.swift */; };
 		E6555C592AEC269B002B3C44 /* CGFloat+Spacing.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6555C582AEC269B002B3C44 /* CGFloat+Spacing.swift */; };
 		E6555C5D2AEC389F002B3C44 /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6555C5C2AEC389F002B3C44 /* View+Extension.swift */; };
@@ -56,6 +57,7 @@
 		E636E3832AEC62C6004291C6 /* ShortLinkListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortLinkListView.swift; sourceTree = "<group>"; };
 		E636E3852AEC6321004291C6 /* ShortLinkItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortLinkItemView.swift; sourceTree = "<group>"; };
 		E639F4C92AEEC7550034B838 /* InputLinkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputLinkView.swift; sourceTree = "<group>"; };
+		E639F4CB2AEEFEC20034B838 /* ShortLinkViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortLinkViewModelTests.swift; sourceTree = "<group>"; };
 		E6555C562AEC266B002B3C44 /* ToastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastView.swift; sourceTree = "<group>"; };
 		E6555C582AEC269B002B3C44 /* CGFloat+Spacing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+Spacing.swift"; sourceTree = "<group>"; };
 		E6555C5C2AEC389F002B3C44 /* View+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
@@ -157,6 +159,7 @@
 			isa = PBXGroup;
 			children = (
 				E67BC0852AEACD9C00C6F742 /* ShortLinkRepositoryTests.swift */,
+				E639F4CB2AEEFEC20034B838 /* ShortLinkViewModelTests.swift */,
 			);
 			path = ShortLinkTests;
 			sourceTree = "<group>";
@@ -483,6 +486,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E67BC0862AEACD9C00C6F742 /* ShortLinkRepositoryTests.swift in Sources */,
+				E639F4CC2AEEFEC20034B838 /* ShortLinkViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
