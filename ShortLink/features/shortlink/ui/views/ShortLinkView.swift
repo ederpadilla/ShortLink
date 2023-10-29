@@ -35,16 +35,8 @@ struct ShortLinkView: View {
                     .background(Color.black)
             }
             
-            VStack {
-                Spacer()
-                ToastView(toast: $viewModel.shortLinkUi.toast)
-                    .frame(maxWidth: .infinity)
-                    .padding(EdgeInsets(top: .point0,
-                                        leading: .point16,
-                                        bottom: .point24,
-                                        trailing: .point16))
-            }
-            .alignmentGuide(.bottom) { d in d[.bottom] }
+            ToastView(toast: $viewModel.shortLinkUi.toast)
+            
         }
     }
 }
