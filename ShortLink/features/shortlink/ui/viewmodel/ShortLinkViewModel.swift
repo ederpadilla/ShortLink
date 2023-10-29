@@ -17,7 +17,16 @@ class ShortLinkViewModel: ObservableObject {
     }
     
     func createShortLink(urlString: String) {
-        let url = URL(safeString: urlString)
+        guard !urlString.isEmpty else {
+            shortLinkUi.toast = Toast(isShowing: true, message: String(localized: "Empty URL"))
+            return
+        }
+        
+        guard let url = URL(string: urlString), url.scheme != nil, url.host != nil else {
+            shortLinkUi.toast = Toast(isShowing: true, message: String(localized: "Invalid URL"))
+            return
+        }
+        
         Task {
             do {
                 let shortLink = try await createShortLinkUseCase.createShortLink(url)
