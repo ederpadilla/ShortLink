@@ -27,7 +27,6 @@ struct ShortLinkView: View {
                     
                 }
                 .navigationTitle(String(localized: "Short Link Title"))
-                .overlay { ToastView(toast: $viewModel.shortLinkUi.toast) }
             }
             
             if viewModel.shortLinkUi.isLoading {
@@ -35,6 +34,17 @@ struct ShortLinkView: View {
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
                     .background(Color.black)
             }
+            
+            VStack {
+                Spacer()
+                ToastView(toast: $viewModel.shortLinkUi.toast)
+                    .frame(maxWidth: .infinity)
+                    .padding(EdgeInsets(top: .point0,
+                                        leading: .point16,
+                                        bottom: .point24,
+                                        trailing: .point16))
+            }
+            .alignmentGuide(.bottom) { d in d[.bottom] }
         }
     }
 }

@@ -18,6 +18,7 @@ struct ToastView: View {
                                     leading: .point24,
                                     bottom: .point4,
                                     trailing: .point24))
+                .multilineTextAlignment(.center)
                 .background(Color.secondary)
                 .foregroundColor(.white)
                 .cornerRadius(.point10)

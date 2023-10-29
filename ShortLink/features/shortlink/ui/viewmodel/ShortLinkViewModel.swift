@@ -50,7 +50,6 @@ class ShortLinkViewModel: ObservableObject {
     }
     
     private func handleCreateShortLinkError(_ error: Error) {
-        print("meal detail \(error)")
         shortLinkUi.isLoading = false
         shortLinkUi.toast.message =
         switch error {
