@@ -18,7 +18,10 @@ struct ShortLinkView: View {
                 
                 VStack {
                     
-                    InputLinkView(text: $viewModel.shortLinkUi.inputURLText)
+                    InputLinkView(text: $viewModel.shortLinkUi.inputURLText,
+                                  didSelectSendButton: { string in
+                        viewModel.createShortLink(urlString: string)
+                    })
                     
                     ShortLinkListView(shortLinks: viewModel.shortLinkUi.shortLinkItems)
                     
@@ -33,12 +36,6 @@ struct ShortLinkView: View {
             }
         }
     }
-    
-    func createShortLink() {
-        viewModel.createShortLink(url: URL(safeString: "https://www.facebook.com"))
-    }
-    
-    
 }
 
 #Preview {

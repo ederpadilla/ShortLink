@@ -10,6 +10,7 @@ import SwiftUI
 struct InputLinkView: View {
     
     @Binding var text: String
+    var didSelectSendButton: (String) -> Void
     
     var body: some View {
         HStack {
@@ -23,7 +24,7 @@ struct InputLinkView: View {
             .textContentType(.URL)
             
             Button(action: {
-                print("Texto enviado: \(text)")
+                didSelectSendButton(text)
                 hideKeyboard()
             }) {
                 Image(systemName: "paperplane.fill")

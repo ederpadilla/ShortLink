@@ -16,7 +16,8 @@ class ShortLinkViewModel: ObservableObject {
         self.createShortLinkUseCase = createShortLinkUseCase
     }
     
-    func createShortLink(url: URL) {
+    func createShortLink(urlString: String) {
+        let url = URL(safeString: urlString)
         Task {
             do {
                 let shortLink = try await createShortLinkUseCase.createShortLink(url)
