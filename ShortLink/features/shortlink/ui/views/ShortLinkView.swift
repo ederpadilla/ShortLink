@@ -19,8 +19,8 @@ struct ShortLinkView: View {
                 VStack {
                     
                     InputLinkView(text: $viewModel.shortLinkUi.inputURLText,
-                                  didSelectSendButton: { string in
-                        viewModel.createShortLink(urlString: string)
+                                  didSelectSendButton: { textValue in
+                        viewModel.createShortLink(textValue)
                     })
                     
                     ShortLinkListView(shortLinks: viewModel.shortLinkUi.shortLinkItems)
@@ -33,6 +33,7 @@ struct ShortLinkView: View {
             if viewModel.shortLinkUi.isLoading {
                 ProgressView()
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    .background(Color.black)
             }
         }
     }
