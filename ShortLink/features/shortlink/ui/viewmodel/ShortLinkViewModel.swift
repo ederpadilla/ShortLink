@@ -38,7 +38,7 @@ class ShortLinkViewModel: ObservableObject {
             throw ShortLinkError.emptyURL
         }
         
-        guard let url = URL(string: urlString), url.scheme != nil, url.host != nil else {
+        guard let url = URL(string: urlString) else {
             throw ShortLinkError.invalidURL
         }
         return url
