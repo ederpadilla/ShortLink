@@ -11,6 +11,9 @@
         }
       }
     },
+    "Empty URL" : {
+
+    },
     "Error Empty URL" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -98,6 +101,9 @@
           }
         }
       }
+    },
+    "Invalid URL" : {
+
     },
     "Original Des %@" : {
       "localizations" : {
