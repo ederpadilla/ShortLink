@@ -8,7 +8,7 @@
 import Foundation
 
 struct ShortLinkUi {
-    var isLoading: Bool = true
+    var isLoading: Bool = false
     var shortLinkItems: [ShortLinkItemUI] = []
     var toast = Toast(isShowing: false, message: .empty)
     var inputURLText: String = .empty
