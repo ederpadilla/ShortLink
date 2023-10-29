@@ -8,7 +8,7 @@
 import XCTest
 @testable import ShortLink
 
-final class ShortLinkTests: XCTestCase {
+final class ShortLinkRepositoryTests: XCTestCase {
     let url = "https://google.com"
     
     func testCreateShortLinkSuccess() async {
