@@ -16,7 +16,7 @@ final class ShortLinkViewModelTests: XCTestCase {
         let expectation = XCTestExpectation(description: "Create short link successfully")
         
         
-        viewModel.createShortLink("https://example.com")
+        viewModel.createShortLink("https://google.com")
         
         
         DispatchQueue.global().asyncAfter(deadline: .now() + 2.0) {
